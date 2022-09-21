@@ -7,10 +7,10 @@ function Navigation() {
     const { products } = useContext(CartContext);
     return (
         <section className={'wrapper navigation'}>
-            <Link to={'/products'}>
+            <Link to={'/mentoring/products/'}>
                 <h2>Clothes store</h2>
             </Link>
-            <Link to={'/checkout'}>
+            <Link to={'/mentoring/checkout/'}>
                 <div className={'cart'}>
                     <HiShoppingCart/>
                     <span>{products.length}</span>

@@ -12,8 +12,8 @@ function App() {
           <BrowserRouter>
             <Navigation />
             <Routes>
-              <Route path={'/products'} element={<Products/>} />
-              <Route path={'/checkout'} element={<Checkout/>} />
+              <Route path={'/mentoring/products/'} element={<Products/>} />
+              <Route path={'/mentoring/checkout/'} element={<Checkout/>} />
             </Routes>
           </BrowserRouter>
         </CartProvider>
