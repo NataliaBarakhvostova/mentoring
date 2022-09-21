@@ -164,3 +164,17 @@ tfoot {
   z-index: 10;
 }
 
+@media screen and (max-width: 768px){
+  .wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .grid-listing {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+  }
+  .card-image {
+    max-height: 150px;
+  }
+}
+
