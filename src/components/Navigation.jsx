@@ -1,7 +1,10 @@
 import {Link} from "react-router-dom";
 import { HiShoppingCart } from "react-icons/hi"
+import {useContext} from "react";
+import CartContext from "../context/CartContext";
 
 function Navigation() {
+    const { products } = useContext(CartContext);
     return (
         <section className={'wrapper navigation'}>
             <Link to={'/'}>
@@ -10,7 +13,7 @@ function Navigation() {
             <Link to={'/checkout'}>
                 <div className={'cart'}>
                     <HiShoppingCart/>
-                    <span>0</span>
+                    <span>{products.length}</span>
                 </div>
             </Link>
         </section>
