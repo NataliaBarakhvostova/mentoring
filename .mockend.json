@@ -1,0 +1,59 @@
+{
+  "Category": {
+    "name": {
+      "string": [
+        "T-Shirts",
+        "Dresses",
+        "Hats"
+      ]
+    },
+    "description": {
+      "loremParagraphs": {
+        "minLength": 20,
+        "maxLength": 300
+      }
+    },
+    "userComments": {
+      "hasMany": "Product"
+    }
+  },
+  "Product": {
+    "cover": {
+      "regexp": "https://picsum\\.photos/seed/[0-9]{5}/1920/270"
+    },
+    "title": {
+      "loremWords": {
+        "minLength": 5,
+        "maxLength": 20
+      }
+    },
+    "description": {
+      "loremParagraphs": {
+        "minLength": 10,
+        "maxLength": 100
+      }
+    },
+    "price": {
+      "int": {
+        "min": 0,
+        "max": 100
+      }
+    },
+    "color": {
+      "regexp": "#[0-9A-F]{6}"
+    },
+    "tag": {
+      "string": [
+        "winter sale",
+        "summer sale",
+        ""
+      ]
+    },
+    "createdAt": {
+      "dateTime": {
+        "min": "2010-01-01T00:00:00Z",
+        "max": "2020-12-31T23:59:59Z"
+      }
+    }
+  }
+}
