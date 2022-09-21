@@ -11,3 +11,72 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+a {
+  text-decoration: none;
+  color: #303136;
+}
+
+a:hover {
+  color: black;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding-left: 300px;
+  padding-right: 300px;
+}
+
+.title {
+  margin: 0;
+  background-color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid black;
+}
+
+.cart {
+  display: flex;
+  align-items: center;
+}
+
+.cart span {
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.cart svg {
+  width: 25px;
+  height: 25px;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: #303136;
+}
+
+.white {
+  background-color: #fff;
+}
+
+.grid-listing {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  margin-top: 30px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+}
