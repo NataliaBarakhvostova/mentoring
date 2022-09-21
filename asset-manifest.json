@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/mentoring/static/css/main.3aade246.css",
+    "main.js": "/mentoring/static/js/main.40704d12.js",
+    "static/js/787.28cb0dcd.chunk.js": "/mentoring/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/mentoring/index.html",
+    "main.3aade246.css.map": "/mentoring/static/css/main.3aade246.css.map",
+    "main.40704d12.js.map": "/mentoring/static/js/main.40704d12.js.map",
+    "787.28cb0dcd.chunk.js.map": "/mentoring/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3aade246.css",
+    "static/js/main.40704d12.js"
+  ]
+}
