@@ -1,5 +1,5 @@
-import {useEffect, useState} from "react";
-import Card from "./Card";
+import React, {useEffect, useState} from "react";
+import CardItem from "./Card/Card";
 
 function Products() {
 
@@ -27,7 +27,7 @@ function Products() {
             {productList?.length ? (
                 <div className={'wrapper grid-listing'}>
                     {productList?.map((product) => (
-                        <Card key={product.id} title={product.title} data={product} />
+                        <CardItem key={product.id} title={product.title} data={product} />
                     ))}
                 </div>
             ) : (
