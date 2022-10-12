@@ -21,6 +21,7 @@ function App() {
             <BrowserRouter>
               <Navigation />
               <Routes>
+                <Route path={'/'} element={<Products/>} />
                 <Route path={'/mentoring/products/'} element={<Products/>} />
                 <Route path={'/mentoring/checkout/'} element={<Checkout/>} />
               </Routes>

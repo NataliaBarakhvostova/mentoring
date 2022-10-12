@@ -10,7 +10,6 @@
     "@mantine/form": "^5.5.0",
     "@mantine/hooks": "^5.5.0",
     "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "embla-carousel-react": "^7.0.3",
     "react": "^18.2.0",
@@ -47,12 +46,15 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/react": "^13.4.0",
     "@typescript-eslint/eslint-plugin": "^5.39.0",
     "@typescript-eslint/parser": "^5.39.0",
     "eslint": "^8.22.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-react": "^7.31.8",
     "gh-pages": "^4.0.0",
-    "prettier": "2.7.1"
+    "jest-watch-typeahead": "^0.6.5",
+    "prettier": "2.7.1",
+    "react-test-render": "^1.1.2"
   }
 }

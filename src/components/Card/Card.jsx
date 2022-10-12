@@ -5,7 +5,7 @@ import { Button, Card, Image, Badge, Text, createStyles } from '@mantine/core';
 function CardItem({data, title}) {
     const { addToCart } = useContext(CartContext);
 
-    const { description, color, price, tag, cover } = data;
+    const { description, color, price, tag, cover, id } = data;
 
     const useStyles = createStyles((theme) => ({
         card: {
@@ -47,7 +47,7 @@ function CardItem({data, title}) {
     const { classes } = useStyles();
 
     return (
-        <Card ithBorder radius="md" p="md" className={classes.card}>
+        <Card ithBorder radius="md" p="md" className={classes.card} data-testis={id}>
             <Card.Section className={classes.imageSection}>
             <Image src={cover} alt={title} height={200}/>
             </Card.Section>
