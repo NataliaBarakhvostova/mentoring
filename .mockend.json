@@ -19,7 +19,7 @@
   },
   "Product": {
     "cover": {
-      "regexp": "https://picsum\\.photos/seed/[0-9]{5}/300/300"
+      "regexp": "https://picsum\\.photos/seed/[0-9]{5}/250/250"
     },
     "title": {
       "loremWords": {

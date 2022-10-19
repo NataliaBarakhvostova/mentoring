@@ -1,4 +1,4 @@
-import {useContext, useEffect, useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import CartContext from "../context/CartContext";
 
 function Checkout() {
@@ -29,7 +29,7 @@ function Checkout() {
                     </thead>
                     <tbody>
                     {products.map((product, index) => (
-                        <tr>
+                        <tr key={index}>
                             <td>{index + 1}.&nbsp;{product.title}</td>
                             <td>{product.price} $ </td>
                         </tr>

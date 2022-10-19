@@ -1,3 +1,4 @@
+import React from "react";
 import {Link} from "react-router-dom";
 import { HiShoppingCart } from "react-icons/hi"
 import {useContext} from "react";
