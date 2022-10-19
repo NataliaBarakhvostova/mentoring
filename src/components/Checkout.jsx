@@ -1,5 +1,6 @@
 import React, {useContext, useEffect, useState} from "react";
 import CartContext from "../context/CartContext";
+import PageHeader from "./PageHeader/PageHeader";
 
 function Checkout() {
 
@@ -18,9 +19,7 @@ function Checkout() {
 
     return (
         <section className={'page'}>
-            <div className={'wrapper title'}>
-                <h3>Checkout</h3>
-            </div>
+            <PageHeader title={'Checkout'} />
             <div className={'wrapper checkout-listing'}>
                 <table className={'card'}>
                     <thead align={'left'}>

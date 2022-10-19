@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from "react";
 import CardItem from "./Card/Card";
+import PageHeader from "./PageHeader/PageHeader";
+import LoaderWill from "./Loader/Loader";
 
 function Products() {
 
@@ -21,9 +23,7 @@ function Products() {
 
     return (
         <section className={'page'}>
-            <div className={'wrapper title'}>
-                <h3>Products</h3>
-            </div>
+            <PageHeader title={'Products'} />
             {productList?.length ? (
                 <div className={'wrapper grid-listing'}>
                     {productList?.map((product) => (
@@ -31,7 +31,7 @@ function Products() {
                     ))}
                 </div>
             ) : (
-                <div className={'loader'}>Loading...</div>
+              <LoaderWill />
             )}
 
         </section>
