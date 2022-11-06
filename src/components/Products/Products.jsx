@@ -1,21 +1,14 @@
 import React, {useEffect, useState} from "react";
-import CardItem from "./Card/Card";
-import PageHeader from "./PageHeader/PageHeader";
-import LoaderWill from "./Loader/Loader";
+import CardItem from "../Card/Card";
+import PageHeader from "../PageHeader/PageHeader";
+import LoaderWill from "../Loader/Loader";
+import { getProducts } from "../../services/getProducts";
+import cx from 'classnames';
+import theme from './Products.module.css';
 
 function Products() {
 
     const [productList, setProductList] = useState([]);
-
-    const getProducts = async () => {
-        let response = await fetch('https://mockend.com/NataliaBarakhvostova/mentoring/Product?createdAt_order=desc', {
-            headers : {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            }
-        });
-        return await response.json();
-    };
 
     useEffect(() => {
         getProducts().then((products) => setProductList(products));
@@ -25,7 +18,7 @@ function Products() {
         <section className={'page'}>
             <PageHeader title={'Products'} />
             {productList?.length ? (
-                <div className={'wrapper grid-listing'}>
+                <div className={cx(theme.gridListing, 'wrapper')}>
                     {productList?.map((product) => (
                         <CardItem key={product.id} title={product.title} data={product} />
                     ))}

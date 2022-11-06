@@ -1,0 +1,21 @@
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+}
+
+.cart {
+    display: flex;
+    align-items: center;
+}
+
+.cart span {
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.cart svg {
+    width: 25px;
+    height: 25px;
+}

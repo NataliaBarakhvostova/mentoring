@@ -1,9 +1,9 @@
 import './App.css';
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navigation from './components/Navigation';
-import Products from './components/Products';
-import Checkout from './components/Checkout';
+import Navigation from './components/Navigation/Navigation';
+import Products from './components/Products/Products';
+import Checkout from './components/Checkout/Checkout';
 import {CartProvider} from "./context/CartContext";
 import { MantineProvider } from '@mantine/core';
 

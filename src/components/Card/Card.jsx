@@ -1,6 +1,7 @@
 import React, {useContext} from "react";
 import CartContext from "../../context/CartContext";
 import { Button, Card, Image, Badge, Text, createStyles } from '@mantine/core';
+import theme from './Card.module.css';
 
 function CardItem({data, title}) {
     const { addToCart } = useContext(CartContext);
@@ -55,15 +56,15 @@ function CardItem({data, title}) {
                 <Text size="lg" weight={500}>{title}</Text>
                 {tag && <Badge >{tag}</Badge>}
             </Card.Section>
-            <Text size='sm' className={'card-description'}>{description}</Text>
+            <Text size='sm'>{description}</Text>
             <Card.Section className={classes.section}>
-                <div className={'card-colors'}>
+                <div className={theme.cardColors}>
                     Color:
                     <div style={{width: '20px', height: '20px', backgroundColor: color, border: '1px solid black', marginLeft: '10px'}} />
                 </div>
                 <Text size='xl' weight={700}>{price} $</Text>
             </Card.Section>
-            <Button radius="md" onClick={() => addToCart(title, price)} className={'card-button'}>add to cart</Button>
+            <Button radius="md" onClick={() => addToCart(title, price)} className={theme.cardButton}>add to cart</Button>
         </Card>
     );
 }

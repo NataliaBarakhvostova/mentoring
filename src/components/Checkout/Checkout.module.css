@@ -1,0 +1,16 @@
+.checkoutListing {
+    display: flex;
+    margin: 20px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+table,
+td {
+    border: 1px solid #333;
+    padding: 5px 10px;
+}
+
+thead,
+tfoot {
+    color: #000;
+}

@@ -1,0 +1,10 @@
+.cardColors {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+}
+
+.cardButton {
+    width: 100%;
+    margin-top: 25px;
+}

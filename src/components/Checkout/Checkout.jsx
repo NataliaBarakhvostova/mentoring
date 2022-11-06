@@ -1,6 +1,8 @@
 import React, {useContext, useEffect, useState} from "react";
-import CartContext from "../context/CartContext";
-import PageHeader from "./PageHeader/PageHeader";
+import CartContext from "../../context/CartContext";
+import PageHeader from "../PageHeader/PageHeader";
+import theme from './Checkout.module.css';
+import cx from 'classnames';
 
 function Checkout() {
 
@@ -20,8 +22,8 @@ function Checkout() {
     return (
         <section className={'page'}>
             <PageHeader title={'Checkout'} />
-            <div className={'wrapper checkout-listing'}>
-                <table className={'card'}>
+            <div className={cx(theme.checkoutListing, 'wrapper')}>
+                <table>
                     <thead align={'left'}>
                         <th>Product name</th>
                         <th>Price</th>
@@ -39,7 +41,6 @@ function Checkout() {
                         <td colSpan={2}>Summ: {summ} $</td>
                     </tfoot>
                 </table>
-
             </div>
         </section>
     );
