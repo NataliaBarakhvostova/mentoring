@@ -24,10 +24,12 @@ function App() {
                 <Route path={'/'} element={<Products/>} />
                 <Route path={'/mentoring/products/'} element={<Products/>} />
                 <Route path={'/mentoring/checkout/'} element={<Checkout/>} />
+                <Route path={'/mentoring/tests/'} element={<Checkout/>} />
               </Routes>
             </BrowserRouter>
           </CartProvider>
         </div>
+        <a href={'/learn-react/'}>learn react</a>
       </MantineProvider>
   );
 }

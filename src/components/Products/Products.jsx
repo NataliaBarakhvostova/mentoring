@@ -14,6 +14,8 @@ function Products() {
         getProducts().then((products) => setProductList(products));
     }, []);
 
+    console.log(productList.length);
+
     return (
         <section className={'page'}>
             <PageHeader title={'Products'} />

@@ -1,12 +1,18 @@
-import React, {useContext} from "react";
+import React, { useState, useContext } from "react";
 import CartContext from "../../context/CartContext";
 import { Button, Card, Image, Badge, Text, createStyles } from '@mantine/core';
 import theme from './Card.module.css';
 
 function CardItem({data, title}) {
+    const [ buttonActive, setButtonActive ] = useState(true);
     const { addToCart } = useContext(CartContext);
 
     const { description, color, price, tag, cover, id } = data;
+
+    const onAddToCartClick = () => {
+        addToCart(title, price);
+        setButtonActive(false);
+    }
 
     const useStyles = createStyles((theme) => ({
         card: {
@@ -48,7 +54,7 @@ function CardItem({data, title}) {
     const { classes } = useStyles();
 
     return (
-        <Card ithBorder radius="md" p="md" className={classes.card} data-testis={id}>
+        <Card withBorder radius="md" p="md" className={classes.card} data-testis={id}>
             <Card.Section className={classes.imageSection}>
             <Image src={cover} alt={title} height={200}/>
             </Card.Section>
@@ -64,7 +70,7 @@ function CardItem({data, title}) {
                 </div>
                 <Text size='xl' weight={700}>{price} $</Text>
             </Card.Section>
-            <Button radius="md" onClick={() => addToCart(title, price)} className={theme.cardButton}>add to cart</Button>
+            <Button radius="md" onClick={() => buttonActive ? onAddToCartClick() : null } className={theme.cardButton} style={{backgroundColor: buttonActive ? '#228be6' : 'lightgray'}}>{buttonActive ? 'add to cart' : 'added to cart'}</Button>
         </Card>
     );
 }

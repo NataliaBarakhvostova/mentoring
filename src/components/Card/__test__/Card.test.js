@@ -1,9 +1,36 @@
 import React from "react";
-import { createRoot } from 'react-dom/client';
-import Card from './../Card';
+import { fireEvent, render, screen } from '@testing-library/react';
+import CartContext from "../../../context/CartContext";
+import CardItem from './../Card';
 
-it('renders without crashing', () => {
-  const cardContainer = document.createElement('div');
-  const cardRoot = createRoot(cardContainer);
-  cardRoot.render(<Card></Card>);
-})
+function renderCard(product) {
+  return render(
+    <CartContext.Provider value={product}>
+      <CardItem
+        title={product.title}
+        data={{ description: 'card description', price: product.price }} />
+    </CartContext.Provider>
+  );
+}
+
+describe('card component',() => {
+  test('button has correct initial color', () => {
+    renderCard({});
+    const colorButton = screen.getByRole('button', { name: 'add to cart' });
+    expect(colorButton).toHaveStyle({ backgroundColor: '#228be6' });
+  });
+
+  test('button changes text and color on click right', () => {
+    renderCard({
+      title: "aperiam fugit",
+      price: 77
+    });
+    const colorButton = screen.getByRole('button', { name: 'add to cart' });
+    expect(colorButton).toHaveStyle({ backgroundColor: '#228be6' });
+
+    fireEvent.click(colorButton);
+
+    expect(colorButton).toHaveStyle({backgroundColor: 'lightgray'});
+    expect(colorButton).toHaveTextContent('added to cart');
+  });
+});
