@@ -5,7 +5,7 @@ import Products from '../Products';
 test('displays image for every product from server',async () => {
   render(<Products />);
 
-  await waitForElementToBeRemoved(() => screen.queryByRole('loader'));
+  await waitForElementToBeRemoved(() => screen.getByRole('loader'));
 
   const cardImages = await screen.findAllByRole('img');
   if (cardImages.length) {

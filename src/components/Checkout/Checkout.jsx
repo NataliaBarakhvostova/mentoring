@@ -3,11 +3,12 @@ import CartContext from "../../context/CartContext";
 import PageHeader from "../PageHeader/PageHeader";
 import theme from './Checkout.module.css';
 import cx from 'classnames';
+import Login from '../Login/Login';
 
 function Checkout() {
-
-    const { products } = useContext(CartContext);
+    const [token, setToken] = useState();
     const [summ, setSumm] = useState(0);
+    const { products } = useContext(CartContext);
 
     useEffect(() => {
         let prices = [];
@@ -18,6 +19,10 @@ function Checkout() {
         pricing = prices.reduce((a, b) => a + b, 0);
         setSumm(pricing);
     }, [products])
+
+    if(!token) {
+        return <Login setToken={setToken} />
+    }
 
     return (
         <section className={'page'}>

@@ -59,8 +59,8 @@ function CardItem({data, title}) {
             <Image src={cover} alt={title} height={200}/>
             </Card.Section>
             <Card.Section className={classes.section} p="md">
-                <Text size="lg" weight={500}>{title}</Text>
-                {tag && <Badge >{tag}</Badge>}
+                <Text size="lg" weight={500} role={'title'}>{title}</Text>
+                {tag && <Badge role={'tag'}>{tag}</Badge>}
             </Card.Section>
             <Text size='sm'>{description}</Text>
             <Card.Section className={classes.section}>

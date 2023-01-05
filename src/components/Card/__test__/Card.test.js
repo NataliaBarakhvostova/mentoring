@@ -14,6 +14,12 @@ function renderCard(product) {
 }
 
 describe('card component',() => {
+  test('card has non-required tag', () => {
+    renderCard({});
+    const cardTag = screen.getByRole('tag', { name: 'summer sale' || 'winter sale'});
+    expect(cardTag).toBeInTheDocument();
+  });
+
   test('button has correct initial color', () => {
     renderCard({});
     const colorButton = screen.getByRole('button', { name: 'add to cart' });

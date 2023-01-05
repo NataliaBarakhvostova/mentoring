@@ -1,11 +1,13 @@
 import './App.css';
-import React from "react";
+import React  from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navigation from './components/Navigation/Navigation';
 import Products from './components/Products/Products';
 import Checkout from './components/Checkout/Checkout';
 import {CartProvider} from "./context/CartContext";
 import { MantineProvider } from '@mantine/core';
+import NotFound from './components/NotFound/NotFound';
+import NotFoundList from './components/NotFound/NotFoundList';
 
 function App() {
   return (
@@ -25,11 +27,12 @@ function App() {
                 <Route path={'/mentoring/products/'} element={<Products/>} />
                 <Route path={'/mentoring/checkout/'} element={<Checkout/>} />
                 <Route path={'/mentoring/tests/'} element={<Checkout/>} />
+                <Route path={'/mentoring/*'} element={<NotFoundList/>} />
+                <Route path={'*'} element={<NotFound/>} />
               </Routes>
             </BrowserRouter>
           </CartProvider>
         </div>
-        <a href={'/learn-react/'}>learn react</a>
       </MantineProvider>
   );
 }
